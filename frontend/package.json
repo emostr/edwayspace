@@ -8,7 +8,6 @@
     "start": "next start"
   },
   "dependencies": {
-    "canvas": "^3.2.3",
     "jose": "^6.2.2",
     "next": "16.2.3",
     "react": "19.2.4",
