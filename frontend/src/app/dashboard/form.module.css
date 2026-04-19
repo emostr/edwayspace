@@ -1,0 +1,39 @@
+.form {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+  padding: var(--space-md);
+  max-width: 640px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-xs);
+  padding-top: var(--space-xs);
+}
+
+.dateInput {
+  width: 100%;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  padding: 12px 16px;
+  font-family: inherit;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.15s;
+  color-scheme: dark;
+}
+
+.dateInput:focus {
+  border-color: var(--accent);
+}
+
+.dateInput:disabled {
+  opacity: 0.5;
+}

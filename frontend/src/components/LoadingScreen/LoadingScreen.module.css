@@ -1,0 +1,56 @@
+@keyframes shimmer {
+  from { transform: translateX(0); }
+  to { transform: translateX(140px); }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.screen {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.screen.leaving {
+  animation: fadeOut 0.3s ease forwards;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -1px;
+}
+
+.logo span {
+  color: var(--accent);
+}
+
+.bar {
+  margin-top: 24px;
+  width: 200px;
+  height: 2px;
+  background: var(--border);
+  border-radius: 1px;
+  overflow: hidden;
+  position: relative;
+}
+
+.runner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 60px;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 1px;
+  animation: shimmer 1.5s ease-in-out infinite alternate;
+}

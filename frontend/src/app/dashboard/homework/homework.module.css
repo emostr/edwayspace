@@ -1,0 +1,64 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+  padding: var(--space-sm);
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.card:hover {
+  background: var(--bg-secondary);
+}
+
+.subject {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.author {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.content {
+  font-size: 14px;
+  color: var(--text);
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.deadline {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.deadlineOverdue {
+  color: var(--danger);
+}
+
+.deadlineToday {
+  color: var(--accent);
+}
+
+.createdAt {
+  font-size: 12px;
+  color: var(--text-muted);
+}

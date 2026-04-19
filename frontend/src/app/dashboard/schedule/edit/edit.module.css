@@ -1,0 +1,68 @@
+.tableWrap {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+.th {
+  text-align: left;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  padding: 10px 8px;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.tdNum {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent);
+  padding: 6px 8px;
+  vertical-align: middle;
+  border-bottom: 1px solid var(--border);
+  width: 32px;
+}
+
+.td {
+  padding: 4px 6px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+
+.cellSelect {
+  width: 100%;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 13px;
+  padding: 6px 8px;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+
+.cellSelect:focus {
+  border-color: var(--accent);
+}
+
+.cellSelect:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cellSaving {
+  opacity: 0.6;
+}
+
+.footer {
+  margin-top: var(--space-md);
+  display: flex;
+  gap: var(--space-xs);
+}

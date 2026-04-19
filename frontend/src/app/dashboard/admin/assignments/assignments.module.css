@@ -1,0 +1,67 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.teacherCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+  padding: var(--space-sm);
+}
+
+.teacherName {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: var(--space-sm);
+}
+
+.assignmentRows {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.assignmentRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 6px 10px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius);
+}
+
+.assignmentLabel {
+  font-size: 14px;
+}
+
+.arrow {
+  color: var(--accent);
+  font-weight: 600;
+  margin: 0 6px;
+}
+
+.removeBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-muted);
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  border-radius: var(--radius);
+  transition: color 0.15s;
+}
+
+.removeBtn:hover {
+  color: var(--danger);
+}
+
+.noAssignments {
+  font-size: 13px;
+  color: var(--text-muted);
+  padding: 4px 0;
+}

@@ -1,0 +1,64 @@
+@font-face {
+  font-family: 'Racama';
+  src: url('/fonts/racama-regular.woff2') format('woff2');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --bg: #0a0a0a;
+  --bg-card: #141414;
+  --bg-secondary: #1e1e1e;
+  --accent: #0078d4;
+  --accent-dim: #005a9e;
+  --text: #ffffff;
+  --text-muted: #8a8a8a;
+  --border: #2a2a2a;
+  --danger: #d32f2f;
+  --success: #2e7d32;
+
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 32px;
+  --space-lg: 64px;
+  --space-xl: 96px;
+
+  --container: 1200px;
+  --radius: 2px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Racama', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}

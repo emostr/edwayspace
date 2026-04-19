@@ -1,0 +1,113 @@
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+@media (max-width: 768px) {
+  .stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.statCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-sm);
+  text-align: center;
+}
+
+.statValue {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.statLabel {
+  font-size: 12px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.section {
+  margin-bottom: var(--space-md);
+}
+
+.sectionTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-sm);
+}
+
+.scheduleList {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.scheduleRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px var(--space-sm);
+  border-bottom: 1px solid var(--border);
+}
+
+.scheduleRow:last-child {
+  border-bottom: none;
+}
+
+.lessonNum {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent);
+  min-width: 20px;
+}
+
+.lessonName {
+  font-size: 14px;
+  color: var(--text);
+}
+
+.studentList {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.studentRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px var(--space-sm);
+  border-bottom: 1px solid var(--border);
+}
+
+.studentRow:last-child {
+  border-bottom: none;
+}
+
+.studentName {
+  font-size: 14px;
+  color: var(--text);
+}
+
+.trustedBadge {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--bg-secondary);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 2px 8px;
+}

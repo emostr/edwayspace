@@ -1,0 +1,91 @@
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+  padding: var(--space-md);
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.subject {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: var(--space-md);
+}
+
+.author {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.createdAt {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.content {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--text);
+  white-space: pre-wrap;
+}
+
+.cardActions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  margin-top: var(--space-md);
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--border);
+}
+
+.deleteBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
+  color: var(--danger);
+  padding: 10px 0;
+  transition: opacity 0.15s;
+}
+
+.deleteBtn:hover {
+  opacity: 0.7;
+}
+
+.deleteBtnModal {
+  background: var(--danger);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 14px 36px;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.deleteBtnModal:hover:not(:disabled) {
+  opacity: 0.85;
+}
+
+.deleteBtnModal:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

@@ -1,0 +1,118 @@
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+}
+
+.statCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+  padding: var(--space-md);
+}
+
+.statValue {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.statLabel {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.section {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.sectionTitle {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: var(--space-sm);
+}
+
+.sectionDesc {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: var(--space-sm);
+}
+
+.sectionForm {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.sectionActions {
+  display: flex;
+  gap: var(--space-sm);
+  margin-top: var(--space-sm);
+}
+
+.dangerSection {
+  border-left: 3px solid var(--danger);
+}
+
+.dangerBtn {
+  background: none;
+  border: 1px solid var(--danger);
+  color: var(--danger);
+  padding: 10px 24px;
+  border-radius: var(--radius);
+  font-size: 14px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s, color 0.15s;
+}
+
+.dangerBtn:hover {
+  background: var(--danger);
+  color: #fff;
+}
+
+.credBlock {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.credRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+}
+
+.credLabel {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.credValue {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.credWarning {
+  font-size: 13px;
+  color: var(--danger);
+  margin-top: var(--space-sm);
+}
+
+@media (max-width: 768px) {
+  .statsRow {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,28 @@
+@keyframes skeleton-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.skeleton {
+  background: linear-gradient(90deg, var(--bg-secondary) 25%, var(--bg-card) 50%, var(--bg-secondary) 75%);
+  background-size: 200% 100%;
+  border-radius: var(--radius);
+  animation: skeleton-shimmer 1.5s ease-in-out infinite;
+}
+
+.text {
+  height: 16px;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.title {
+  height: 28px;
+  width: 60%;
+  margin-bottom: 16px;
+}
+
+.card {
+  height: 120px;
+  width: 100%;
+}

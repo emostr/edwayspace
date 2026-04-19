@@ -1,0 +1,50 @@
+.list {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px var(--space-sm);
+  border-bottom: 1px solid var(--border);
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.subjectName {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.actionBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  color: var(--text-muted);
+  border-radius: var(--radius);
+  transition: color 0.15s, background 0.15s;
+  display: flex;
+  align-items: center;
+}
+
+.actionBtn:hover {
+  color: var(--text);
+  background: var(--bg-secondary);
+}
+
+.actionBtnDanger:hover {
+  color: var(--danger);
+  background: var(--bg-secondary);
+}

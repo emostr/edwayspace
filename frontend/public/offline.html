@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Нет подключения — edway.space</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #0a0a0a;
+      color: #ffffff;
+      font-family: system-ui, -apple-system, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 16px;
+      padding: 32px;
+      text-align: center;
+    }
+    .logo { font-size: 24px; font-weight: 700; letter-spacing: -1px; margin-bottom: 8px; }
+    .logo span { color: #0078d4; }
+    .icon { margin-bottom: 8px; }
+    .title { font-size: 24px; font-weight: 700; }
+    .sub { font-size: 15px; color: #8a8a8a; max-width: 320px; line-height: 1.5; }
+    .btn {
+      margin-top: 8px;
+      background: #0078d4;
+      color: #fff;
+      border: 2px solid #0078d4;
+      border-radius: 2px;
+      font-family: inherit;
+      font-size: 15px;
+      font-weight: 600;
+      padding: 14px 36px;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .btn:hover { background: #005a9e; border-color: #005a9e; }
+  </style>
+</head>
+<body>
+  <div class="logo">edway<span>.</span>space</div>
+  <div class="icon">
+    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#8a8a8a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M8 24C8 15.2 15.2 8 24 8s16 7.2 16 16" />
+      <path d="M24 8v4M8 24H4M44 24h-4M24 40v4" />
+      <circle cx="24" cy="24" r="6" />
+      <path d="M34 34l8 8M34 42l8-8" stroke="#d32f2f" />
+    </svg>
+  </div>
+  <div class="title">Нет подключения</div>
+  <div class="sub">Проверьте интернет-соединение и попробуйте снова</div>
+  <button class="btn" onclick="window.location.reload()">Обновить</button>
+</body>
+</html>

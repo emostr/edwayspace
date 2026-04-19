@@ -1,0 +1,67 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-sm);
+}
+
+.dayCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-sm);
+}
+
+.dayCardToday {
+  border-left: 3px solid var(--accent);
+  padding-left: calc(var(--space-sm) - 2px);
+}
+
+.dayTitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: var(--space-xs);
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.dayTitleToday {
+  color: var(--accent);
+}
+
+.empty {
+  font-size: 13px;
+  color: var(--text-muted);
+  padding: 8px 0;
+}
+
+.lessonRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.lessonRow:last-of-type {
+  border-bottom: none;
+}
+
+.lessonNum {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--accent);
+  min-width: 20px;
+  text-align: center;
+}
+
+.lessonName {
+  font-size: 13px;
+  color: var(--text);
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

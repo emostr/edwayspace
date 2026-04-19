@@ -1,0 +1,41 @@
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(100%); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideOut {
+  from { opacity: 1; transform: translateX(0); }
+  to { opacity: 0; transform: translateX(100%); }
+}
+
+.toast {
+  position: fixed;
+  top: 80px;
+  right: 32px;
+  z-index: 300;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 20px;
+  font-size: 14px;
+  color: var(--text);
+  max-width: 320px;
+  animation: slideIn 0.2s ease forwards;
+  box-shadow: none;
+}
+
+.success {
+  border-left: 3px solid var(--success);
+}
+
+.error {
+  border-left: 3px solid var(--danger);
+}
+
+@media (max-width: 768px) {
+  .toast {
+    right: 16px;
+    left: 16px;
+    max-width: none;
+  }
+}

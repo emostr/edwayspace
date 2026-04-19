@@ -1,0 +1,31 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+  padding: var(--space-sm);
+}
+
+.className {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.subjects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.hint {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: var(--space-sm);
+}

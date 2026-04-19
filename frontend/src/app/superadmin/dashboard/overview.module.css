@@ -1,0 +1,105 @@
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+}
+
+.statCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+  padding: var(--space-md);
+}
+
+.statValue {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.statLabel {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-sm);
+}
+
+.sectionTitle {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.schoolList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.schoolCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-md);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.schoolInfo {
+  flex: 1;
+}
+
+.schoolName {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.schoolCity {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.schoolMeta {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 6px;
+}
+
+.schoolRight {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.schoolDate {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.emptyState {
+  text-align: center;
+  padding: var(--space-lg);
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .schoolCard {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+  }
+}
