@@ -1,0 +1,160 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  SUPERADMIN
+  STUDENT
+  TRUSTED_STUDENT
+  TEACHER
+  CLASS_HEAD
+  ZAVUCH
+}
+
+enum AnnouncementLevel {
+  CLASS
+  SCHOOL
+}
+
+model School {
+  id            String         @id @default(uuid())
+  name          String
+  city          String
+  adminEmail    String
+  createdAt     DateTime       @default(now())
+  users         User[]
+  classes       Class[]
+  subjects      Subject[]
+  announcements Announcement[]
+}
+
+model User {
+  id                 String               @id @default(uuid())
+  schoolId           String?
+  school             School?              @relation(fields: [schoolId], references: [id], onDelete: SetNull)
+  classId            String?
+  class              Class?               @relation("ClassMembers", fields: [classId], references: [id], onDelete: Cascade)
+  login              String               @unique
+  passwordHash       String
+  role               Role
+  firstName          String
+  lastName           String
+  mustChangePassword Boolean              @default(true)
+  createdAt          DateTime             @default(now())
+  headedClasses      Class[]              @relation("ClassHead")
+  teacherAssignments TeacherAssignment[]
+  authoredHomework   Homework[]
+  authoredNotes      Note[]
+  authoredAnnouncements Announcement[]
+
+  @@index([schoolId])
+  @@index([classId])
+}
+
+model Class {
+  id          String              @id @default(uuid())
+  schoolId    String
+  school      School              @relation(fields: [schoolId], references: [id], onDelete: Cascade)
+  classHeadId String?
+  classHead   User?               @relation("ClassHead", fields: [classHeadId], references: [id], onDelete: SetNull)
+  name        String
+  members     User[]              @relation("ClassMembers")
+  assignments TeacherAssignment[]
+  schedule    Schedule[]
+  homework    Homework[]
+  notes       Note[]
+  announcements Announcement[]
+
+  @@index([schoolId])
+}
+
+model Subject {
+  id          String              @id @default(uuid())
+  schoolId    String
+  school      School              @relation(fields: [schoolId], references: [id], onDelete: Cascade)
+  name        String
+  assignments TeacherAssignment[]
+  schedule    Schedule[]
+  homework    Homework[]
+  notes       Note[]
+
+  @@index([schoolId])
+}
+
+model TeacherAssignment {
+  id        String  @id @default(uuid())
+  teacherId String
+  teacher   User    @relation(fields: [teacherId], references: [id], onDelete: Cascade)
+  subjectId String
+  subject   Subject @relation(fields: [subjectId], references: [id], onDelete: Cascade)
+  classId   String
+  class     Class   @relation(fields: [classId], references: [id], onDelete: Cascade)
+
+  @@unique([teacherId, subjectId, classId])
+  @@index([teacherId])
+  @@index([classId])
+}
+
+model Schedule {
+  id           String  @id @default(uuid())
+  classId      String
+  class        Class   @relation(fields: [classId], references: [id], onDelete: Cascade)
+  subjectId    String
+  subject      Subject @relation(fields: [subjectId], references: [id], onDelete: Cascade)
+  dayOfWeek    Int
+  lessonNumber Int
+
+  @@unique([classId, dayOfWeek, lessonNumber])
+  @@index([classId])
+}
+
+model Homework {
+  id        String    @id @default(uuid())
+  classId   String
+  class     Class     @relation(fields: [classId], references: [id], onDelete: Cascade)
+  subjectId String
+  subject   Subject   @relation(fields: [subjectId], references: [id], onDelete: Cascade)
+  authorId  String
+  author    User      @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  content   String
+  deadline  DateTime?
+  createdAt DateTime  @default(now())
+
+  @@index([classId])
+}
+
+model Note {
+  id        String   @id @default(uuid())
+  classId   String
+  class     Class    @relation(fields: [classId], references: [id], onDelete: Cascade)
+  subjectId String
+  subject   Subject  @relation(fields: [subjectId], references: [id], onDelete: Cascade)
+  authorId  String
+  author    User     @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  title     String
+  content   String
+  createdAt DateTime @default(now())
+
+  @@index([classId])
+}
+
+model Announcement {
+  id        String            @id @default(uuid())
+  schoolId  String
+  school    School            @relation(fields: [schoolId], references: [id], onDelete: Cascade)
+  classId   String?
+  class     Class?            @relation(fields: [classId], references: [id], onDelete: Cascade)
+  authorId  String
+  author    User              @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  content   String
+  level     AnnouncementLevel
+  createdAt DateTime          @default(now())
+
+  @@index([schoolId])
+  @@index([classId])
+}
