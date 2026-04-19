@@ -37,3 +37,14 @@
 .dateInput:disabled {
   opacity: 0.5;
 }
+
+@media (max-width: 768px) {
+  .form {
+    padding: var(--space-sm);
+    max-width: 100%;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+}

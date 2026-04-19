@@ -14,7 +14,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
       <header className={styles.header}>
         <div className={styles.headerInner}>
           <Link href="/dashboard" className={styles.logo}>
-            edway.space Alpha
+            edway<span className={styles.dot}>.</span>space
           </Link>
           <button
             className={`${styles.burger} ${sidebarOpen ? styles.burgerOpen : ''}`}

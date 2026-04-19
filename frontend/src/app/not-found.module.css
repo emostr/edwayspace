@@ -46,3 +46,18 @@
   background: var(--accent-dim);
   border-color: var(--accent-dim);
 }
+
+@media (max-width: 768px) {
+  .code {
+    font-size: 72px;
+  }
+
+  .message {
+    font-size: 18px;
+  }
+
+  .wrap {
+    padding: var(--space-sm);
+    text-align: center;
+  }
+}

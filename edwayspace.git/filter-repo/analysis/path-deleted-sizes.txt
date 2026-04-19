@@ -1,0 +1,4 @@
+=== Deleted paths by reverse accumulated size ===
+Format: unpacked size, packed size, date deleted, path name(s)
+       10734       4417 2026-04-19 CLAUDE.md
+        1556        745 2026-04-19 README.md

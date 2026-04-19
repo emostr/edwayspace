@@ -115,4 +115,21 @@
   .statsRow {
     grid-template-columns: 1fr;
   }
+
+  .statValue {
+    font-size: 22px;
+  }
+
+  .section {
+    padding: var(--space-sm);
+  }
+
+  .sectionActions {
+    flex-direction: column;
+  }
+
+  .credValue {
+    font-size: 14px;
+    word-break: break-all;
+  }
 }

@@ -69,7 +69,15 @@
 }
 
 @media (max-width: 768px) {
+  .main {
+    padding: var(--space-sm);
+  }
+
   .card {
-    padding: var(--space-md);
+    padding: var(--space-sm);
+  }
+
+  .title {
+    font-size: 18px;
   }
 }

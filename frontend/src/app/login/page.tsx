@@ -31,7 +31,7 @@ export default function LoginPage() {
     <div className={styles.page}>
       <header className={styles.header}>
         <div className={styles.headerInner}>
-          <span className={styles.logo}>edway.space Alpha</span>
+          <span className={styles.logo}>edway<span className={styles.dot}>.</span>space</span>
           <nav className={styles.headerNav}>
             <a
               href="https://edway.space/pages/about.html"

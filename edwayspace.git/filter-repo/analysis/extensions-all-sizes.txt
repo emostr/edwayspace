@@ -1,0 +1,18 @@
+=== All extensions by reverse size ===
+Format: unpacked size, packed size, date deleted, extension name
+      254519      64015 <present>  .json
+      176045      51449 <present>  .tsx
+       92172      29389 <present>  .ts
+       45867      15377 <present>  .css
+       13908       9734 <present>  .svg
+       25931       9287 <present>  .ico
+        7304       7318 <present>  .woff2
+       14078       6138 <present>  .md
+        7812       5896 <present>  .png
+        7573       1201 <present>  .sql
+        4765        985 <present>  .prisma
+        2013        980 <present>  .html
+        1871        828 <present>  .js
+         366        258 <present>  <no extension>
+         137        129 <present>  .example
+         126        113 <present>  .toml

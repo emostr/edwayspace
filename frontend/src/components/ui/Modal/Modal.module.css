@@ -71,12 +71,20 @@
 
 @media (max-width: 768px) {
   .overlay {
-    padding: 16px;
+    padding: var(--space-sm);
     align-items: flex-end;
   }
 
   .modal {
-    padding: 24px;
-    max-width: calc(100vw - 32px);
+    padding: var(--space-sm);
+    max-width: 100%;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  .actions {
+    flex-direction: column;
   }
 }

@@ -31,7 +31,7 @@ export default function SuperadminDashboardLayout({ children }: { children: Reac
       <header className={styles.header}>
         <div className={styles.headerInner}>
           <div className={styles.headerLeft}>
-            <span className={styles.logo}>edway.space</span>
+            <span className={styles.logo}>edway<span className={styles.dot}>.</span>space</span>
             <span className={styles.headerBadge}>SUPERADMIN</span>
           </div>
           <button className={styles.logoutBtn} onClick={logout}>Выйти</button>

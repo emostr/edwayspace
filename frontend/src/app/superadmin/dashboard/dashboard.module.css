@@ -31,11 +31,9 @@
 .logo {
   font-size: 22px;
   font-weight: 700;
-  position: relative;
 }
 
-.logo::after {
-  content: '.';
+.dot {
   color: var(--accent);
 }
 
@@ -112,5 +110,17 @@
 
   .content {
     margin-left: 0;
+  }
+
+  .main {
+    padding: var(--space-sm);
+  }
+
+  .headerLeft {
+    gap: 8px;
+  }
+
+  .logo {
+    font-size: 18px;
   }
 }

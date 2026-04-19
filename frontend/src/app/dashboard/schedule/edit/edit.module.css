@@ -66,3 +66,17 @@
   display: flex;
   gap: var(--space-xs);
 }
+
+@media (max-width: 768px) {
+  .tableWrap {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .table {
+    min-width: 500px;
+  }
+
+  .footer {
+    flex-direction: column;
+  }
+}

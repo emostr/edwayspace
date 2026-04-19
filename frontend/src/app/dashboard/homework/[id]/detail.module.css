@@ -92,3 +92,18 @@
   opacity: 0.5;
   cursor: not-allowed;
 }
+
+@media (max-width: 768px) {
+  .card {
+    padding: var(--space-sm);
+  }
+
+  .subject {
+    font-size: 18px;
+  }
+
+  .cardActions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
