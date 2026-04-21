@@ -1,6 +1,6 @@
 {
   "name": "edway.space — школьная платформа",
-  "short_name": "edway",
+  "short_name": "edway.space",
   "description": "Единое школьное пространство для учеников и учителей",
   "start_url": "/dashboard",
   "display": "standalone",
